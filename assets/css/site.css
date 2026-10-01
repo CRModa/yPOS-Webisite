@@ -733,3 +733,11 @@ main {
 /* No cartão principal, as formas de pagamento ficam no fundo do cartão */
 .pay-label { margin-top: auto; padding-top: 18px; }
 .pay-label + .pay { margin-top: 8px; }
+
+/* Célula com texto em vez de ícone (ex.: número de utilizadores) */
+.compare td.t {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
