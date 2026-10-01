@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+body {
+  font-family: var(--font);
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  /* Grelha leve de papel quadriculado */
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--brand-ink);
+  text-underline-offset: 3px;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* O título recebe foco ao mudar de página só para leitores de ecrã. */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+.mdi::before {
+  line-height: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Etiqueta de secção ao estilo da app (label em maiúsculas) */
+.eyebrow {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+kbd {
+  font-family: var(--font);
+  font-size: 0.82em;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.7em;
+  height: 1.7em;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  vertical-align: 0.05em;
+}
+
+/* Nome de um botão ou campo do ecrã da app */
+b,
+strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ui {
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--brand-soft);
+  border-radius: 5px;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge.ok { background: var(--brand-soft); color: var(--brand-ink); }
+.badge.warn { background: var(--warn-soft); color: var(--warn); }
+.badge.danger { background: var(--danger-soft); color: var(--danger); }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

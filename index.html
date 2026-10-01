@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="O YPOS transforma um telemóvel Android ou iPhone num ponto de venda completo: vendas, stock, compras, faturas e relatórios. Funciona sem internet. Pensado para Moçambique.">
+  <meta name="theme-color" content="#15803d">
+  <title>YPOS · Vendas e stock</title>
+
+  <!-- Tema escolhido antes do primeiro desenho, para não piscar -->
+  <script>
+    try {
+      var t = JSON.parse(localStorage.getItem('ypos-site:theme'));
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+  <!-- Os mesmos ícones da app (Material Design Icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/phone.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#topo">
+      <span class="brand-mark"><span class="mdi mdi-point-of-sale" aria-hidden="true"></span></span>
+      <span class="brand-text"><strong>YPOS</strong><span>Vendas e stock</span></span>
+    </a>
+    <nav class="site-nav" id="nav" aria-label="Secções">
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#planos">Planos</a>
+      <a href="#porque">Porquê o YPOS</a>
+      <a href="#comecar">Como começar</a>
+    </nav>
+    <button class="icon-btn theme-btn" type="button"></button>
+    <a class="btn btn-primary btn-sm header-cta" href="#planos">Ver planos</a>
+    <button class="icon-btn menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span class="mdi mdi-menu" aria-hidden="true"></span></button>
+  </header>
+
+  <main id="topo">
+    <!-- ---------- Hero ---------- -->
+    <section class="sheet hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Gestão de vendas e stock no telemóvel</div>
+        <h1>Venda, controle e cresça, tudo a partir do seu <em>telemóvel</em>.</h1>
+        <p class="lead">O YPOS transforma um telemóvel Android ou iPhone num ponto de venda completo. Para mercearias, lojas e pequenos negócios que querem vender mais depressa, controlar o stock e saber, a qualquer momento, quanto estão a ganhar.</p>
+        <div class="hero-meta">
+          <span><span class="mdi mdi-cellphone" aria-hidden="true"></span>Android e iPhone</span>
+          <span><span class="mdi mdi-wifi-off" aria-hidden="true"></span>Funciona sem internet</span>
+          <span><span class="mdi mdi-cash" aria-hidden="true"></span>Valores em Meticais</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#planos"><span class="mdi mdi-tag-outline" aria-hidden="true"></span>Ver planos, desde 300 MZN</a>
+          <a class="btn btn-ghost" href="#funcionalidades"><span class="mdi mdi-view-grid-outline" aria-hidden="true"></span>O que pode fazer</a>
+        </div>
+      </div>
+
+      <figure class="hero-phone">
+        <div class="phone app-light" role="img" aria-label="O ecrã de venda do YPOS">
+          <div class="ph-screen"><div class="ph-stage"></div></div>
+        </div>
+        <div class="screen-tabs" role="tablist" aria-label="Ecrãs da app">
+          <button type="button" role="tab" data-screen="pos"><span class="mdi mdi-cart-outline" aria-hidden="true"></span>Venda</button>
+          <button type="button" role="tab" data-screen="painel"><span class="mdi mdi-view-dashboard-outline" aria-hidden="true"></span>Painel</button>
+          <button type="button" role="tab" data-screen="faturas"><span class="mdi mdi-file-document-outline" aria-hidden="true"></span>Faturas</button>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ---------- Sem internet ---------- -->
+    <section class="offline">
+      <span class="offline-icon"><span class="mdi mdi-wifi-off" aria-hidden="true"></span></span>
+      <div>
+        <h2>Funciona sem internet.</h2>
+        <p>Os dados ficam guardados no próprio aparelho, por isso pode vender em qualquer lugar, mesmo com a rede em baixo.</p>
+      </div>
+    </section>
+
+    <!-- ---------- Funcionalidades ---------- -->
+    <section class="sheet" id="funcionalidades">
+      <div class="section-head">
+        <span class="eyebrow">Funcionalidades</span>
+        <h2>O que pode fazer com o YPOS</h2>
+      </div>
+
+      <div class="features">
+        <article class="feature feature-lead">
+          <span class="feature-icon"><span class="mdi mdi-cart-outline" aria-hidden="true"></span></span>
+          <h3>Vender em segundos</h3>
+          <ul>
+            <li>Um ecrã de venda (POS) rápido e fácil de usar ao balcão.</li>
+            <li>Imprime o talão na hora, numa impressora térmica Bluetooth.</li>
+          </ul>
+          <div class="eyebrow pay-label">Formas de pagamento aceites</div>
+          <div class="pay">
+            <span>Dinheiro</span><span>M-Pesa</span><span>e-Mola</span><span>Cartão de débito ou crédito</span><span>Transferência</span>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon"><span class="mdi mdi-package-variant-closed" aria-hidden="true"></span></span>
+          <h3>Controlar o stock</h3>
+          <ul>
+            <li>Cada venda e cada compra atualizam as quantidades automaticamente.</li>
+            <li>Avisa quando um produto está a chegar ao stock mínimo.</li>
+            <li>Ajustes manuais, com histórico de todos os movimentos.</li>
+            <li>Produtos por categoria, com preço de venda, custo e margem.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon"><span class="mdi mdi-truck-outline" aria-hidden="true"></span></span>
+          <h3>Registar compras e fornecedores</h3>
+          <ul>
+            <li>Registe as compras de mercadoria. O stock e as despesas são atualizados sozinhos.</li>
+            <li>Guarde os contactos dos seus fornecedores.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon"><span class="mdi mdi-file-document-outline" aria-hidden="true"></span></span>
+          <h3>Faturas e recibos para clientes <span class="plan-tag">Plus</span></h3>
+          <ul>
+            <li>Emita faturas com data de vencimento aos seus clientes.</li>
+            <li>Registe pagamentos totais ou parciais e veja num relance o que está pago, pendente ou em atraso.</li>
+            <li>Gere a fatura e o recibo em PDF e envie-os por WhatsApp ou e-mail.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon"><span class="mdi mdi-chart-box-outline" aria-hidden="true"></span></span>
+          <h3>Saber como está o negócio</h3>
+          <ul>
+            <li>Painel com vendas, ticket médio, compras, despesas, margem bruta e lucro estimado.</li>
+            <li>Os produtos mais vendidos e as vendas de cada operador.</li>
+            <li>Gráficos por dia ou por mês, para qualquer período que escolher.</li>
+            <li>Exporte vendas, compras, produtos e movimentos de stock para Excel.</li>
+            <li>Imprima o resumo do dia no fecho da caixa.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon"><span class="mdi mdi-account-group-outline" aria-hidden="true"></span></span>
+          <h3>Controlar a equipa</h3>
+          <ul>
+            <li>Cada pessoa entra com a sua própria conta.</li>
+            <li>Três perfis: Administrador, Gestor e Vendedor. Cada um vê apenas o que lhe compete.</li>
+            <li>Todas as vendas ficam associadas a quem as fez.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon"><span class="mdi mdi-palette-outline" aria-hidden="true"></span></span>
+          <h3>Personalizar</h3>
+          <ul>
+            <li>Os dados da sua empresa aparecem nas faturas, nos recibos e nos talões.</li>
+            <li>Tem modo claro e modo escuro.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon"><span class="mdi mdi-wrench-outline" aria-hidden="true"></span></span>
+          <h3>Vender serviços <span class="plan-tag">Premium</span></h3>
+          <ul>
+            <li>Registe serviços para além de produtos: reparações, mão de obra, entregas, consultas.</li>
+            <li>Venda e fature produtos e serviços no mesmo talão ou fatura.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- Planos ---------- -->
+    <section class="sheet" id="planos">
+      <div class="section-head">
+        <span class="eyebrow">Planos</span>
+        <h2>Escolha o plano para o seu negócio</h2>
+      </div>
+      <p class="section-lead">Licença por aparelho, ativada em segundos com um código ou QR code. Todos os planos funcionam sem internet.</p>
+
+      <div class="plans">
+        <article class="plan">
+          <div class="plan-top">
+            <h3>Basic</h3>
+            <p>Para quem quer vender e controlar o stock.</p>
+          </div>
+          <div class="plan-price"><b>300</b><span>MZN<br>por aparelho / mês</span></div>
+          <ul class="plan-list">
+            <li>Ecrã de venda (POS) e talão Bluetooth</li>
+            <li>Dinheiro, M-Pesa, e-Mola, cartão e transferência</li>
+            <li>Stock automático, com aviso de stock mínimo</li>
+            <li>Compras e fornecedores</li>
+            <li>Painel, gráficos e exportação para Excel</li>
+            <li>Equipa com três perfis</li>
+          </ul>
+          <a class="btn btn-ghost plan-btn" href="#comecar" data-plan="Basic">Escolher Basic</a>
+        </article>
+
+        <article class="plan plan-featured">
+          <span class="plan-badge">Mais escolhido</span>
+          <div class="plan-top">
+            <h3>Plus</h3>
+            <p>Para quem também vende a crédito e emite faturas.</p>
+          </div>
+          <div class="plan-price"><b>500</b><span>MZN<br>por aparelho / mês</span></div>
+          <ul class="plan-list">
+            <li class="plan-inherit">Tudo do Basic, e ainda:</li>
+            <li>Faturas com data de vencimento</li>
+            <li>Pagamentos totais ou parciais</li>
+            <li>Pago, pendente e em atraso num relance</li>
+            <li>Fatura e recibo em PDF</li>
+            <li>Envio por WhatsApp ou e-mail</li>
+          </ul>
+          <a class="btn btn-primary plan-btn" href="#comecar" data-plan="Plus">Escolher Plus</a>
+        </article>
+
+        <article class="plan">
+          <div class="plan-top">
+            <h3>Premium</h3>
+            <p>Para quem vende serviços para além de produtos.</p>
+          </div>
+          <div class="plan-price"><b>800</b><span>MZN<br>por aparelho / mês</span></div>
+          <ul class="plan-list">
+            <li class="plan-inherit">Tudo do Plus, e ainda:</li>
+            <li>Serviços para além de produtos</li>
+            <li>Produtos e serviços na mesma venda</li>
+            <li>Produtos e serviços na mesma fatura</li>
+            <li>Ideal para oficinas, salões e prestadores de serviços</li>
+          </ul>
+          <a class="btn btn-ghost plan-btn" href="#comecar" data-plan="Premium">Escolher Premium</a>
+        </article>
+      </div>
+
+      <div class="compare-wrap">
+        <table class="compare">
+          <caption class="sr-only">Comparação dos planos</caption>
+          <thead>
+            <tr><th scope="col">Funcionalidade</th><th scope="col">Basic</th><th scope="col">Plus</th><th scope="col">Premium</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Vendas no POS e talão Bluetooth</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Controlo de stock e alertas</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Compras e fornecedores</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Painel, relatórios e Excel</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Equipa com três perfis</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Faturas e recibos em PDF</th><td class="n">Não</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Pagamentos parciais e faturas em atraso</th><td class="n">Não</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Serviços para além de produtos</th><td class="n">Não</td><td class="n">Não</td><td class="y">Sim</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---------- Porquê ---------- -->
+    <section class="sheet" id="porque">
+      <div class="section-head">
+        <span class="eyebrow">Porquê o YPOS</span>
+        <h2>Porquê escolher o YPOS?</h2>
+      </div>
+      <div class="why">
+        <div class="why-item">
+          <span class="why-icon"><span class="mdi mdi-cellphone-check" aria-hidden="true"></span></span>
+          <h3>Sem computador nem equipamento caro</h3>
+          <p>Basta um telemóvel e, se quiser talões, uma impressora Bluetooth.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon"><span class="mdi mdi-map-marker-outline" aria-hidden="true"></span></span>
+          <h3>Pensado para Moçambique</h3>
+          <p>Valores em Meticais (MZN) e pagamentos por M-Pesa e e-Mola.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon"><span class="mdi mdi-school-outline" aria-hidden="true"></span></span>
+          <h3>Simples de aprender</h3>
+          <p>A sua equipa começa a vender no primeiro dia.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon"><span class="mdi mdi-qrcode-scan" aria-hidden="true"></span></span>
+          <h3>Ativado em segundos</h3>
+          <p>Licença por aparelho, ativada com um código ou QR code.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Como começar ---------- -->
+    <section class="sheet" id="comecar">
+      <div class="section-head">
+        <span class="eyebrow">Como começar</span>
+        <h2>A vender em 4 passos</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="step-dot"><span class="mdi mdi-download-outline" aria-hidden="true"></span></span><span class="step-when">Passo 1</span><span class="step-what">Instale o YPOS no telemóvel Android ou iPhone.</span></li>
+        <li><span class="step-dot"><span class="mdi mdi-tag-outline" aria-hidden="true"></span></span><span class="step-when">Passo 2</span><span class="step-what">Escolha o plano e peça a licença para o seu aparelho.</span></li>
+        <li><span class="step-dot"><span class="mdi mdi-qrcode-scan" aria-hidden="true"></span></span><span class="step-when">Passo 3</span><span class="step-what">Ative com o código ou lendo o QR code.</span></li>
+        <li><span class="step-dot"><span class="mdi mdi-cart-check" aria-hidden="true"></span></span><span class="step-when">Passo 4</span><span class="step-what">Registe os produtos e faça a primeira venda.</span></li>
+      </ol>
+
+      <div class="cta">
+        <div>
+          <h3>YPOS: venda, controle e cresça.</h3>
+          <p>Tudo a partir do seu telemóvel. <span class="chosen" aria-live="polite"></span></p>
+        </div>
+        <a class="btn btn-primary" id="contacto" href="https://wa.me/258000000000?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20YPOS." target="_blank" rel="noopener"><span class="mdi mdi-whatsapp" aria-hidden="true"></span>Pedir a minha licença</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand-mini"><span class="mdi mdi-point-of-sale" aria-hidden="true"></span>YPOS</span>
+    <span>Vendas e stock no telemóvel · Moçambique</span>
+    <span>© <span class="year">2026</span></span>
+  </footer>
+
+  <script src="assets/js/ypos.js"></script>
+  <script src="assets/js/screens.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

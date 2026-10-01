@@ -1,0 +1,131 @@
+/* Design tokens.
+   As cores da app (--app-*) vêm de POS-Mobile/constants/theme.ts, para que o
+   site pareça o próprio YPOS. */
+
+:root {
+  color-scheme: light;
+
+  /* Papel e tinta do manual */
+  --paper: #f4f2ec;
+  --sheet: #fffefb;
+  --ink: #15181c;
+  --ink-2: #4b5059;
+  --ink-3: #8a8f98;
+  --rule: #dedad0;
+  --rule-strong: #15181c;
+
+  /* Marca (igual à app) */
+  --brand: #15803d;
+  --brand-ink: #0f5c2e;
+  --brand-soft: #e7f5ec;
+  --accent: #f97316;
+  --accent-soft: #fff1e6;
+  --warn: #b45309;
+  --warn-soft: #fef3e2;
+  --danger: #dc2626;
+  --danger-soft: #fdecec;
+  --info: #2563eb;
+  --info-soft: #eaf1fe;
+
+  /* Paleta da app, usada dentro do telemóvel */
+  --app-primary: #15803d;
+  --app-primary-soft: #e7f5ec;
+  --app-accent: #f97316;
+  --app-bg: #f7f8fa;
+  --app-surface: #ffffff;
+  --app-border: #e6e8eb;
+  --app-text: #15181c;
+  --app-text-2: #6b7280;
+  --app-muted: #9ca3af;
+  --app-danger: #dc2626;
+  --app-danger-soft: #fdecec;
+  --app-warning: #d97706;
+  --app-warning-soft: #fef3e2;
+  --app-overlay: rgba(15, 23, 20, 0.45);
+
+  --font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgba(20, 20, 10, 0.06), 0 8px 24px -12px rgba(20, 20, 10, 0.18);
+  --header-h: 64px;
+  --toc-w: 290px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0e110f;
+    --sheet: #161a18;
+    --ink: #eef1ee;
+    --ink-2: #b3bab5;
+    --ink-3: #7d847f;
+    --rule: #2b302d;
+    --rule-strong: #eef1ee;
+    --brand: #34d399;
+    --brand-ink: #6ee7b7;
+    --brand-soft: rgba(52, 211, 153, 0.14);
+    --accent: #fb923c;
+    --accent-soft: rgba(251, 146, 60, 0.14);
+    --warn: #fbbf24;
+    --warn-soft: rgba(251, 191, 36, 0.13);
+    --danger: #f87171;
+    --danger-soft: rgba(248, 113, 113, 0.14);
+    --info: #60a5fa;
+    --info-soft: rgba(96, 165, 250, 0.14);
+    --app-primary: #34d399;
+    --app-primary-soft: rgba(52, 211, 153, 0.16);
+    --app-accent: #fb923c;
+    --app-bg: #101312;
+    --app-surface: #1a1e1c;
+    --app-border: #2b302d;
+    --app-text: #f1f3f1;
+    --app-text-2: #a6ada9;
+    --app-muted: #767c78;
+    --app-danger: #f87171;
+    --app-danger-soft: rgba(248, 113, 113, 0.16);
+    --app-warning: #fbbf24;
+    --app-warning-soft: rgba(251, 191, 36, 0.16);
+    --app-overlay: rgba(0, 0, 0, 0.6);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0e110f;
+  --sheet: #161a18;
+  --ink: #eef1ee;
+  --ink-2: #b3bab5;
+  --ink-3: #7d847f;
+  --rule: #2b302d;
+  --rule-strong: #eef1ee;
+  --brand: #34d399;
+  --brand-ink: #6ee7b7;
+  --brand-soft: rgba(52, 211, 153, 0.14);
+  --accent: #fb923c;
+  --accent-soft: rgba(251, 146, 60, 0.14);
+  --warn: #fbbf24;
+  --warn-soft: rgba(251, 191, 36, 0.13);
+  --danger: #f87171;
+  --danger-soft: rgba(248, 113, 113, 0.14);
+  --info: #60a5fa;
+  --info-soft: rgba(96, 165, 250, 0.14);
+  --app-primary: #34d399;
+  --app-primary-soft: rgba(52, 211, 153, 0.16);
+  --app-accent: #fb923c;
+  --app-bg: #101312;
+  --app-surface: #1a1e1c;
+  --app-border: #2b302d;
+  --app-text: #f1f3f1;
+  --app-text-2: #a6ada9;
+  --app-muted: #767c78;
+  --app-danger: #f87171;
+  --app-danger-soft: rgba(248, 113, 113, 0.16);
+  --app-warning: #fbbf24;
+  --app-warning-soft: rgba(251, 191, 36, 0.16);
+  --app-overlay: rgba(0, 0, 0, 0.6);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+}
