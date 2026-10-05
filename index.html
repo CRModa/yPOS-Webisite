@@ -111,6 +111,7 @@
             <li>Avisa quando um produto está a chegar ao stock mínimo.</li>
             <li>Ajustes manuais, com histórico de todos os movimentos.</li>
             <li>Produtos por categoria, com preço de venda, custo e margem.</li>
+            <li>Produtos compostos (cabazes, kits, combos): ao vender, o stock de cada componente é baixado e o YPOS calcula quantos consegue montar.</li>
           </ul>
         </article>
 
@@ -130,6 +131,7 @@
             <li>Emita faturas com data de vencimento aos seus clientes.</li>
             <li>Registe pagamentos totais ou parciais e veja num relance o que está pago, pendente ou em atraso.</li>
             <li>Gere a fatura e o recibo em PDF e envie-os por WhatsApp ou e-mail.</li>
+            <li>Corrija faturas, anule recibos ou cancele uma fatura, com o stock devolvido automaticamente.</li>
           </ul>
         </article>
 
@@ -151,15 +153,18 @@
           <ul>
             <li>Cada pessoa entra com a sua própria conta.</li>
             <li>Três perfis: Administrador, Gestor e Vendedor. Cada um vê apenas o que lhe compete.</li>
+            <li>O Vendedor vende e consulta produtos, mas não altera preços, não regista compras nem mexe no stock.</li>
             <li>Todas as vendas ficam associadas a quem as fez.</li>
           </ul>
         </article>
 
         <article class="feature">
-          <span class="feature-icon"><span class="mdi mdi-palette-outline" aria-hidden="true"></span></span>
-          <h3>Personalizar</h3>
+          <span class="feature-icon"><span class="mdi mdi-backup-restore" aria-hidden="true"></span></span>
+          <h3>Personalizar e guardar os dados</h3>
           <ul>
+            <li>Na primeira abertura, registe a sua empresa e crie a sua conta de administrador.</li>
             <li>Os dados da sua empresa aparecem nas faturas, nos recibos e nos talões.</li>
+            <li>Faça backup de tudo num ficheiro e restaure noutro telemóvel, se trocar de aparelho.</li>
             <li>Tem modo claro e modo escuro.</li>
           </ul>
         </article>
@@ -170,6 +175,7 @@
           <ul>
             <li>Registe serviços para além de produtos: reparações, mão de obra, entregas, consultas.</li>
             <li>Venda e fature produtos e serviços no mesmo talão ou fatura.</li>
+            <li>Indique os materiais que cada serviço gasta, e o stock é baixado sozinho.</li>
           </ul>
         </article>
       </div>
@@ -195,8 +201,10 @@
             <li>Dinheiro, M-Pesa, e-Mola, cartão e transferência</li>
             <li>Stock automático, com aviso de stock mínimo</li>
             <li>Compras e fornecedores</li>
+            <li>Produtos compostos: cabazes, kits e combos</li>
             <li>Painel, gráficos e exportação para Excel</li>
-            <li>Um único utilizador, com perfil de Gestor</li>
+            <li>Backup e restauro dos dados</li>
+            <li>Um único utilizador, o dono</li>
           </ul>
           <a class="btn btn-ghost plan-btn" href="#comecar" data-plan="Basic">Escolher Basic</a>
         </article>
@@ -215,7 +223,7 @@
             <li>Faturas com data de vencimento</li>
             <li>Pagamentos totais ou parciais</li>
             <li>Pago, pendente e em atraso num relance</li>
-            <li>Fatura e recibo em PDF</li>
+            <li>Fatura e recibo em PDF, anulação de recibos</li>
             <li>Envio por WhatsApp ou e-mail</li>
           </ul>
           <a class="btn btn-primary plan-btn" href="#comecar" data-plan="Plus">Escolher Plus</a>
@@ -232,6 +240,7 @@
             <li>Serviços para além de produtos</li>
             <li>Produtos e serviços na mesma venda</li>
             <li>Produtos e serviços na mesma fatura</li>
+            <li>Materiais gastos em cada serviço saem do stock</li>
             <li>Ideal para oficinas, salões e prestadores de serviços</li>
           </ul>
           <a class="btn btn-ghost plan-btn" href="#comecar" data-plan="Premium">Escolher Premium</a>
@@ -247,12 +256,14 @@
           <tbody>
             <tr><th scope="row">Vendas no POS e talão Bluetooth</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
             <tr><th scope="row">Controlo de stock e alertas</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Produtos compostos (kits e cabazes)</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
             <tr><th scope="row">Compras e fornecedores</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
             <tr><th scope="row">Painel, relatórios e Excel</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
-            <tr><th scope="row">Utilizadores</th><td class="t">1 (Gestor)</td><td class="t">Equipa, 3 perfis</td><td class="t">Equipa, 3 perfis</td></tr>
+            <tr><th scope="row">Backup e restauro</th><td class="y">Sim</td><td class="y">Sim</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Utilizadores</th><td class="t">1 (o dono)</td><td class="t">Equipa, 3 perfis</td><td class="t">Equipa, 3 perfis</td></tr>
             <tr><th scope="row">Faturas e recibos em PDF</th><td class="n">Não</td><td class="y">Sim</td><td class="y">Sim</td></tr>
             <tr><th scope="row">Pagamentos parciais e faturas em atraso</th><td class="n">Não</td><td class="y">Sim</td><td class="y">Sim</td></tr>
-            <tr><th scope="row">Serviços para além de produtos</th><td class="n">Não</td><td class="n">Não</td><td class="y">Sim</td></tr>
+            <tr><th scope="row">Serviços, com baixa de materiais</th><td class="n">Não</td><td class="n">Não</td><td class="y">Sim</td></tr>
           </tbody>
         </table>
       </div>
